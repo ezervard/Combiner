@@ -392,8 +392,10 @@ class EasyUpper:
 if __name__ =="__main__":
     EasyUpper().run()
 
+#skflsdh;fsldhgsdGhsdklgs
+#залупка
 
-#dfskndkgSDL:GSDL:GJDL:GSLDGs
+
 
 
 # реализовать перевод каким нибудь способом! хотя бы ru/pl в идеале ru/pl/en
