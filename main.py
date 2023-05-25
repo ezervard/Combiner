@@ -246,7 +246,7 @@ class EasyUpper:
         for row in s2.iter_rows():
             if row is not None:
                 plates_data = row[3].value
-                names_data = row[7].value
+                names_data = row[8].value
                 places_data = row[5].value
                 control_data = row[7].value
                 card_data = row[0].value
