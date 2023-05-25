@@ -391,6 +391,7 @@ class EasyUpper:
 if __name__ =="__main__":
     EasyUpper().run()
 
+# sdasdasgasg
 
 
 # реализовать перевод каким нибудь способом! хотя бы ru/pl в идеале ru/pl/en
