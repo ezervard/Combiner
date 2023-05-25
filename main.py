@@ -394,6 +394,7 @@ if __name__ =="__main__":
 
 #skflsdh;fsldhgsdGhsdklgs
 #залупка
+# сама залупка )))))
 
 
 
