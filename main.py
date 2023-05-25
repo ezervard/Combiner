@@ -246,7 +246,7 @@ class EasyUpper:
         for row in s2.iter_rows():
             if row is not None:
                 plates_data = row[3].value
-                names_data = row[8].value
+                names_data = row[7].value
                 places_data = row[5].value
                 control_data = row[7].value
                 card_data = row[0].value
@@ -312,7 +312,7 @@ class EasyUpper:
                         cell1.value = value_places
                     except AttributeError:
                         messagebox.showinfo('Error', 'File have a merged cells')
-        # Заполнение столбцов тип авто и фирма!
+
         for row in s1.iter_rows(min_row=8, max_row=100):
             row_index = row[8].row
             cell = s1.cell(row=row_index , column=6)
@@ -322,19 +322,20 @@ class EasyUpper:
             if cell1.value is None:
                 cell1.value = 'OSOBOWY'
 
-
-        image = Image('LG_Title.png')
         try:
+            image = Image('LG_Title.png')
             s1.add_image(image, 'B1')
-        except ValueError:
+        except FileNotFoundError:
             pass
+
         try:
             self.workbook.save(self.file_panel.file)
-            self.workbook.close()
+
         except PermissionError:
             messagebox.showinfo('Error', 'File open in another programm')
         else:
             messagebox.showinfo('Complete', 'Saved!') #
+        self.workbook.close()
     def landguages(self):
         current_language = 'ru'
         translations = {
@@ -394,10 +395,12 @@ if __name__ =="__main__":
 
 
 
+
+
 # реализовать перевод каким нибудь способом! хотя бы ru/pl в идеале ru/pl/en
-# провести дебаг сессию на стабильность(), вычистить код(готово)
+# провести дебаг сессию на стабильность(), вычистить код
 # подготовка к релизу и упаковка в exe файл(бета версия работает стабильно!)!
-# подготовка к работе с сырым рапортом (или протолкнуть свой вариант на все смены)!!!!
+# подготовка к работе с сырым рапортом
 # ограничить область сканирования до 500 строк на все функции!!!
 
 
